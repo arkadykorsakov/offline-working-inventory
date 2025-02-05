@@ -1,39 +1,40 @@
-# .
+# Инвентарь (Тестовое задание)
 
-This template should help get you started developing with Vue 3 in Vite.
+## Описание
 
-## Recommended IDE Setup
+Веб-приложение "Инвентарь" представляет собой автономно работающий инвентарь, в котором предметы и их позиции сохраняются после закрытия браузера. При нажатии на предмет появляется плашка с его описанием и кнопкой удаления, позволяющей удалить предмет.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Технологический стек
 
-## Type Support for `.vue` Imports in TS
+- **Vue 3** (Composition API, `script setup`)
+- **TypeScript**
+- **SCSS** (верстка по методологии БЭМ)
+- **Vite** (сборка)
+- **Pinia** (управление состоянием)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Функциональность
 
-## Customize configuration
+- **Сохранение состояния инвентаря** (предметов и их позиций) при закрытии браузера
+- **Отображение предметов** в инвентаре
+- **Вывод плашки с описанием** предмета при нажатии
+- **Удаление предметов** из инвентаря
+- **Drag & Drop** для перемещения инвентаря
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Установка и запуск
 
-## Project Setup
+1. Установите зависимости:
+   ```sh
+   npm install
+   ```
+2. Запустите локальный сервер разработки:
+   ```sh
+   npm run dev
+   ```
 
-```sh
-npm install
-```
+## Разработка
 
-### Compile and Hot-Reload for Development
+- Код разделен на логически обоснованные компоненты
+- Повторяющийся функционал вынесен в переиспользуемые компоненты
+- Используется управление состоянием (если необходимо)
+- Данные хранятся локально (`localStorage`)
 
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
